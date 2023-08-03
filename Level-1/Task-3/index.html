@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div class="calculator">
+      <div class="dis-container">
+        <!-- <div class="inner-dis-c"> -->
+          <div class="upper-body">
+            <input type="text" id="display" disabled />
+            <span>Calculator</span>
+          </div>
+          <p>Large display</p>
+        <!-- </div> -->
+      </div>
+      <div class="check-d">
+        <span title="disabled"><i>Check</i></span>
+        <span class="sec-check" onclick="clearAllScreen()"><i>Delete</i></span>
+        <span class="power-display"></span>
+      </div>
+      <div class="btn-container">
+        <div class="btn">
+          <div class="blue-btn">
+            <span title="disabled"><i>GT</i></span>
+            <span title="disabled"><i>=/-</i></span>
+            <span title="disabled"><i>Mu</i></span>
+          </div>
+          <span value="C" onclick="clearScreen()"><i>CE</i></span>
+        </div>
+        <div class="buttons">
+          <span value="7" onclick="display('7')"><i>7</i></span>
+          <span value="8" onclick="display('8')"><i>8</i></span>
+          <span value="9" onclick="display('9')"><i>9</i></span>
+
+          <span value="4" onclick="display('4')"><i>4</i></span>
+          <span value="5" onclick="display('5')"><i>5</i></span>
+          <span value="6" onclick="display('6')"><i>6</i></span>
+
+          <span value="1" onclick="display('1')"><i>1</i></span>
+          <span value="2" onclick="display('2')"><i>2</i></span>
+          <span value="3" onclick="display('3')"><i>3</i></span>
+
+          <span value="0" onclick="display('0')"><i>0</i></span>
+          <span value="00" onclick="display('00')"><i>00</i></span>
+          <span value="." onclick="display('.')"><i>.</i></span>
+        </div>
+        <div class="buttons-1">
+          <span value="/" onclick="display('/')" class="m"><i>÷</i></span>
+          <span value="√" onclick="findSquareRoot()"><i>√ </i></span>
+          <span value="" onclick="toggleCalculator()" id="on-btn"><i>On/off</i></span>
+
+          <span value="*" onclick="display('*')"><i>*</i></span>
+          <span value="%" onclick="display('%')"><i>%</i></span>
+          <span value="" onclick="display('')" title="disabled"><i>Mc</i></span>
+
+          <span value="+" onclick="display('+')" class="plus"><i>+</i></span>
+          <span value="-" onclick="display('-')"><i>-</i></span>
+          <span value="" onclick="display('')" title="disabled"><i>M-</i></span>
+
+          <span value="1" onclick="calculate()" id="btn"><i>=</i></span>
+          <span value="1" onclick="display('')" title="disabled"><i>M+</i></span>
+        </div>
+      </div>
+    </div>
+    <script src="calc.js"></script>
+  </body>
+</html>

@@ -1,0 +1,235 @@
+@font-face {
+  font-family: "digital";
+  src: url(./Assests/digital-7.ttf);
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f1f1f1;
+  }
+  
+  .calculator {
+    width: 34%;
+    border: 2px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #050505cc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.541);
+  }
+  .dis-container{
+    height: 108px;
+    background-color: black;
+  }
+  .dis-container::before {
+    content: '';
+    position: absolute;
+    top: -15px; /* Adjust this value to control the amount of bending */
+    left: 0;
+    width: 100%;
+    height: 30px; /* Adjust this value to control the height of the bent portion */
+    border-radius: 50%; /* Creates a semi-circle shape */
+    background-color: #f0f0f0;
+  }
+  .dis-container p{
+    color: white;
+    font-size: 12px;
+    padding: 2px 0 0 16px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  .upper-body {
+    display: flex;
+    justify-content: space-between;
+    top: 11px;
+    margin: 8px;
+    height: 77px;
+    background-color: white;
+    border-radius: 5px;
+}
+.upper-body span{
+  width: 20%;
+  font-size: 20px;
+  margin: 25px 10px 0 15px;
+}
+
+  /* .inner-dis-c{
+    width: 34pc;
+    background-color: antiquewhite;
+    z-index: 0;
+  } */
+  
+  #display {
+    margin: 8px 0 0 17px;
+    width: 70%;
+    height: 56px;
+    background-color:rgb(49, 82, 34);
+    border-radius: 5px;
+    font-family: "digital";
+    color: black;
+    font-size: 48px;
+    text-align: right;
+    
+  }
+  .btn-container{
+    display: flex;
+    /* align-items: center; */
+    width: 91%;
+    margin-left: 19px;
+    border: 1px solid black;
+  }
+  
+  .buttons,
+  .buttons-1{
+    display: grid;
+    grid-template-columns: repeat(3, 0fr);
+    /* padding: 40px 30px 30px;
+    border-radius: 20px; */
+    /* box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.25),
+      10px 10px 70px rgba(0, 0, 0, 0.25), inset -5px -5px 15px rgba(0, 0, 0, 0.25),
+      inset 5px 5px 15px rgba(0, 0, 0, 0.25); */
+  }
+  .buttons-1{
+border-left: 1px solid black;
+  }
+  .buttons-1 .plus{
+    grid-row: span 2;
+    height: 120px;
+  }
+  /* .buttons-1 .m{
+    grid-column: span 2;
+    width: 180px;
+    background: #f00;
+  }
+  .buttons-1 .m::before {
+    background: linear-gradient(90deg, #d20000, #ffffff5c);
+    border-left: 1px solid #fff4;
+    border-bottom: 1px solid #fff4;
+    border-top: 1px solid #fff4;
+  } */
+  .buttons span,
+  .buttons-1 span{
+    color: #fff;
+    position: relative;
+    display: grid;
+    width: 52px;
+    place-items: center;
+    margin: 4px;
+    height: 50px;
+    background-color: rgb(31, 31, 31);
+    box-shadow: 
+    0 2px 5px rgba(0, 0, 0, 0.1),
+    -1px -1px 0 white, /* Right and bottom borders */
+    2px 2px 0 black; /* Left and top borders */
+    user-select: none;
+    cursor: pointer;
+    font-weight: 400;
+  }
+.btn{
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid black;
+}
+.btn span{
+    color: #fff;
+    position: relative;
+    display: grid;
+    width: 52px;
+    place-items: center;
+    margin: 4px;
+    height: 54px;
+    background-color: rgb(31, 31, 31);
+    box-shadow: 
+    0 2px 5px rgba(0, 0, 0, 0.1),
+    -1px -1px 0 white, /* Right and bottom borders */
+    2px 2px 0 black; /* Left and top borders */
+    user-select: none;
+    cursor: pointer;
+    font-weight: 400;
+}
+
+.blue-btn span{
+  height: 36px;
+  margin-bottom: 22px;
+  background-color: rgb(55, 141, 221);
+}
+  /* .buttons span:active,
+  .buttons-1 span:active {
+    filter: brightness(1.5);
+  }
+  .buttons span::before,
+  .buttons-1 span::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    bottom: 14px;
+    right: 12px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #2d2d2d, #4d4d4d);
+    box-shadow: -5px -5px 15px rgba(0, 0, 0, 0.1),
+      10px 5px 10px rgba(0, 0, 0, 0.15);
+    border-left: 1px solid #0004;
+    border-bottom: 1px solid #0004;
+    border-top: 1px solid #0009;
+  } */
+  
+  .buttons span:hover,
+  .buttons-1 span:hover {
+    background-color: black;
+  }
+
+  .buttons span i,
+  .buttons-1 span i,
+  .btn span i{
+    position: relative;
+    font-style: normal;
+    font-size: 11px;
+    text-transform: uppercase;
+  }
+  
+  .check-d{
+    display: flex;
+    background-color: black;
+    padding: 8px;
+    margin-bottom: 7px;
+    border-top:4px solid white ;
+  }
+  .check-d span{
+    color: #fff;
+    position: relative;
+    display: grid;
+    width: 80px;
+    place-items: center;
+    margin: 4px;
+    height: 31px;
+    background-color: rgb(55, 141, 221);
+    box-shadow: 
+    0 2px 5px rgba(0, 0, 0, 0.1),
+    -1px -1px 0 white, /* Right and bottom borders */
+    2px 2px 0 black; /* Left and top borders */
+    user-select: none;
+    cursor: pointer;
+    font-weight: 400;
+  }
+  .check-d .sec-check{
+    margin-left: 19px
+  }
+  .check-d .power-display{
+    position: relative;
+    bottom: 6px;
+    background-color: #58371b;
+    box-shadow: 
+    0 2px 5px rgba(0, 0, 0, 0.1),
+    -0px -1px 0 White, /* Right and bottom borders */
+    0px 2px 0 black; 
+    margin:  0 20px 0 105px;
+    width: 210px;
+    height: 41px;
+  }
+
+  .buttons-1 #on-btn i{
+    font-family: 12px;
+  }

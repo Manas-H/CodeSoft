@@ -1,0 +1,565 @@
+body {
+  margin: 0;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../../Assets/b-bg.jpg);
+  opacity: 0.25;
+  z-index: -1;
+} 
+/* nav container css */
+nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: white;
+	box-shadow: 0 4px 6px rgb(180, 171, 171), 0 2px 4px rgba(192, 184, 184, 0.753);
+	z-index: 1;
+    border-radius: 0px 0px 10px 10px;
+}
+
+/* bottom border css */
+nav::after {
+	content: "";
+	position: absolute;
+	bottom: -10px;
+	left: 0;
+	width: 100%;
+	height: 12px;
+	border-bottom-left-radius: 50% 10px;
+	border-bottom-right-radius: 50% 10px;
+	box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.1);
+	z-index: -1;
+}
+
+/* naviggation inner container */
+.nav-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 20px;
+	height: 60px;
+	position: relative; /* Add relative positioning */
+	z-index: 2; /* Increase z-index */
+}
+
+/* name/logo in nav */
+.nav-container .brand {
+	padding: 0 0 0 100px;
+}
+.nav-container .brand h1 a{
+  text-decoration: none;
+  color: black;
+}
+
+/* list of menus in nav */
+.nav-container .menu-list {
+	display: flex;
+    align-items: center;
+	padding: 0 100px 0 0;
+}
+
+/* list of the menus every menu text */
+.nav-container .menu-list li {
+	position: relative;
+	list-style: none;
+	display: flex;
+	align-items: center;
+	height: 100%;
+	padding: 0 20px;
+}
+
+.nav-container .menu-list li a {
+	color: black;
+	text-decoration: none;
+	white-space: nowrap;
+	height: 100%;
+	text-transform: uppercase;
+}
+.nav-container .menu-list li a:hover{
+  color: lightblue;
+}
+.nav-container .menu-list .plans-p{
+    position: relative;
+    padding: 20px 5px;
+}
+.plans-p svg{
+    height: 10px;
+    padding-left: 5px;
+}
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    left:0;
+    top:58px;
+    background-color: lightblue;
+    padding: 8px;
+    z-index: 1;
+  }
+  
+  .plans-p:hover .dropdown-menu,
+  .dropdown-menu:hover {
+    color: lightblue;
+    display: block;
+  }
+  
+  .dropdown-menu li {
+    margin-bottom: 4px;
+  }
+  
+  .dropdown-menu li a {
+    color: white;
+    text-decoration: none;
+    padding: 4px 8px;
+  }
+  
+  .dropdown-menu li a:hover {
+    background-color: darkblue;
+  }
+  
+  .plans-p:hover .dropdown-menu {
+    display: block;
+  }
+  
+
+  .nav-container .menu-list .signin-signup button{
+    border: 1px solid #fff;
+    border-radius: 20px;
+    padding:10px 20px;
+    background-color: lightblue;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    /* padding: 5px; */
+  }
+
+  .nav-container .menu-list .signin-signup button:hover{
+    border: 1px solid lightblue;
+    background-color: #fff;
+    color: rgb(66, 156, 197);
+  }
+  
+  .nav-container .menu-list .signin-signup .signup-btn{
+    border-radius: 0px 20px 20px 0px;
+  }
+
+  /* train booking container in the body */
+  .train-b-container{
+    background-color: #0f4c81;
+    margin-top: 3rem;
+    width: 100%;
+    height: 60vh;
+  }
+  .headin-train-b-con{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 13px 20px 0 20px;
+    color: white;
+  }
+  /* inner box train search and book */
+  .inner-search-tr{
+    position: relative;
+    top: 0%;
+    left: 10%;
+    background-color: #E8FFCE;
+    width: 80%;
+    height: 14rem;
+    border-radius: 15px;
+  }
+  /* train status div  */
+  .train-statuses{
+    display: flex;
+    
+  }
+/* train status spans */
+  .train-statuses span{
+    /* border:1px solid black; */
+    border: 1px solid rgba(0, 0, 0, 0.438);
+    width: 1000px;
+  }
+  /* train status span 1 */
+  .train-statuses .span-1{
+    border-radius: 14px 0px 0px 0px
+  }
+  /* train status span 3 */
+  .train-statuses .span-3{
+    border-radius: 0px 14px 0px 0px
+  }
+
+  /* text inside the span train */
+  .train-statuses span p{
+    font-family: Quicksand;
+    font-size: 18px;
+    font-weight: 300;
+    color: #212155;
+    text-align: center;
+  }
+
+  /* span whixh is active/cliked */
+  .train-statuses span.active {
+    background-color:lightblue;
+    color: white;
+  }
+
+  /* train booking container */
+  .book-train{
+    /* display:flex; */
+    /* justify-content: space-around; */
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.267);
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px 80px;
+  }
+  .book-train .book-t-in-f-t{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+/* search container from and to*/
+  .station-search, .pnr-search, .live-st{
+    /* border: 2px solid #e1e7ee; */
+    border-radius: 8px;
+    height: 72px;
+    background: #fff;
+    cursor: pointer;
+    position: relative;
+    padding: 16px 18px 15px;
+  }
+  /* text inside search container */
+  .station-search p, .pnr-search p, .live-st p{
+    font-family: Quicksand;
+    font-size: 14px;
+    display: inline-flex;
+    font-weight: 700;
+    color: #777;
+    position: absolute;
+    padding: 0 4px;
+    left: 14px;
+    top: -10px;
+    background-color: #fff;
+  }
+.station-search input, .pnr-search input, .live-st input{
+    /* display: flex;
+    align-items: center; */
+    font-family: Quicksand;
+    font-size: 18px;
+    font-weight: 700;
+    /* color: #c2c2c2; */
+    color: black;
+    padding:15px 40px;
+}
+/* symbol or icon in the middle of fromand to */
+.double-sym{
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.384);
+    border-radius: 12px;
+    background-color: #fff;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    bottom: 5px;
+    padding: 8px;
+}
+/* search button  */
+.search-train p{
+  font-family: Quicksand;
+  font-size: 20px;
+  /* display: inline-flex; */
+  font-weight:600;
+  color: white;
+  box-shadow: 0 0 10px rgb(0 0 0 / 63%);
+  position: absolute;
+  bottom: -10px;
+  left: 44%;
+  padding: 10px 40px;
+  border-radius: 20px;
+  border: 1px solid #00000078;
+  background-color: #4682A9;
+  cursor: pointer;
+}
+.search-train p:hover{
+  border: 1px solid #4682A9;
+ background-color: #fff;
+ color: #0f4c81;
+
+}
+
+/* pnr container */
+.pnr-status, .live-status{
+  justify-content: center;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.267);
+  border-radius: 20px;
+  padding: 10px;
+  margin: 10px 80px;
+}
+.pnr-status .pnr-search p{
+  font-size: 20px;
+  color: #505050;
+}
+
+.pnr-status .pnr-search input, .live-st input{
+  padding: 15px 150px;
+  font-size: 20px;
+  text-align: start;
+  color:black;
+}
+
+/* container of the number of station */
+.book-t-con{
+border: 1px solid rgba(0, 0, 0, 0.384);
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.253);
+border-radius: 20px;
+background-color: white;
+width: 80%;
+height: 130px;
+margin: 30px 130px;
+}
+
+/* text in the .book-t-con container */
+.book-text {
+  display: flex;
+  align-items: baseline;
+  /* justify-content: first baseline; */
+  margin: 0px 20px;
+}
+/* heading */
+.book-text p{
+  width: 37%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+}
+/* list of staions */
+.book-text ul{
+  display: flex;
+  flex-wrap: wrap; /* This property will wrap the list items into multiple lines */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.book-text ul li{
+padding-left: 8px;
+cursor: pointer;
+}
+
+.book-text ul li a{
+  text-decoration: none;
+  color: black;
+  }
+  .book-text ul li a:hover{
+    text-decoration: underline;
+    color: lightblue;
+  }
+
+/* note in book stations container */
+.book-t-note{
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  margin: 10px 20px;
+}
+
+.book-t-note .b-t-note{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.book-t-note .b-t-text{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  padding: 0 0 0 10px;
+}
+
+/* offer container css */
+.offers-container{
+border: 1px solid rgba(0, 0, 0, 0.384);
+box-shadow: 0 0 0px rgba(0, 0, 0, 0.253);
+border-radius: 20px;
+background-color: white;
+width: 90%;
+height: auto;
+margin: 30px 60px;
+}
+/* heading of the offer container */
+.offers-container h1{
+  text-align: center;
+  font-weight: 400;
+}
+.offers-inner-container{
+display: flex;
+flex-wrap: wrap;
+flex-basis: calc(33.33% - 10px);
+}
+/* offer container single  */
+.offer-div-c{
+  border: 1px solid rgba(0, 0, 0, 0.384);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.253);
+  border-radius: 20px;
+  width: 29.8%;
+  height: auto;
+  margin: 20px;
+}
+/* image inside the single container */
+.image-text-offer {
+ display: flex;
+ padding: 5px 10px;
+}
+
+.image-text-offer img{
+width: 120px;  
+ }
+.image-text-offer .text-offer{
+  padding-left: 15px;
+}
+.text-link-offer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  }
+  /* .offer-4-con{
+    margin-left: 210px;
+  } */
+
+  .text-off-heading{
+    font-size: 17px;
+    font-weight: 800;
+  }
+
+  .text-off-txt{
+    font-size: 13px;
+  }
+
+  /* Common styles for the "Why Choose Us" div */
+
+.chooseus-container{
+  border: 1px solid rgba(0, 0, 0, 0.384);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.253);
+  border-radius: 20px;
+  background-color: white;
+  width: 90%;
+  margin: 30px 65px;
+}
+.chooseus-container h1{
+  text-align: center;
+  font-weight: 400;
+}
+.why-choose-us-container{
+  display: flex;
+  align-items: center;
+}
+.why-choose-us {
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgb(0, 0, 0);
+  margin: 2px 20px 20px 20px;
+  width: 25%;
+  height: 130px;
+}
+
+.icon-container {
+  flex: 0 0 80px;
+  margin-right: 20px;
+}
+
+.icon-container img {
+  width: 100%;
+  height: auto;
+}
+
+.content h2{
+  font-size: 21px;
+  /* flex: 1; */
+}
+
+
+.footer-con{
+  width: 100%;
+  background-color: #fff;
+  margin: 20px 0 0 0 ;
+}
+.f-in-c{
+display: flex;
+justify-content:space-around ;
+}
+.main-f-con{
+  /* display: flex;
+  flex-direction: column;
+  flex-shrink: 1; */
+  padding: 1px 0 0 45px;
+}
+.main-f-con p{
+  /* font-size: 0.875rem;
+  line-height: 1;
+  margin-top: 1rem; */
+  color: #1f2937;
+}
+.dark h1 a{
+  text-decoration: none;
+  color: black;
+}
+.f-icons{
+  display: flex;
+  align-items: center;
+}
+.btn{
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.5);
+  outline-offset: 2px;
+  opacity: 0.5;
+  width: 2rem;
+  height: 2rem;
+  flex-shrink: 0;
+  background-color: #1f2937;
+  cursor: pointer;
+  background-color: #374151;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-p{
+  margin-left: 17px;
+}
+
+
+.company-con{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin: 10px 80px;
+}
+
+.c-link {
+  outline: none;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  margin-top: 1.5rem;
+  color: #1f2937;
+}
+
+.c-link:hover {
+  color: #6b7280;
+}

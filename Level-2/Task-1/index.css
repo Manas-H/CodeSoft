@@ -1,0 +1,246 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fcffea;
+    /* background-size: 100% 100%;
+    background-repeat: no-repeat; */
+  }
+  nav{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  nav ul{
+    display: flex;
+    margin-right:70px;
+  }
+  nav ul li{
+    text-decoration: none;
+    text-transform: none;
+    list-style: none;
+    padding: 25px 70px 0 0;
+    color: #4f4c45;
+    text-transform: uppercase;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  nav ul li a{
+    text-decoration: none;
+    color: #4f4c45;
+  }
+  nav ul li:hover{
+    color: black;
+  }
+  .left{
+    margin-left: 70px;
+  }
+  .left img{
+    width: 250px;
+    height: 130px;
+  }
+
+  .body-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 0 10pc;
+  }
+  .quote{
+    margin-bottom: 70px;
+  }
+  .quote p{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: #4f4c45;
+  }
+  .quote p .span-1{
+    font-weight: bold;
+    margin-left: 12px;
+  }
+  .quote p .span-2{
+    font-weight: 200;
+    font-size: 17px;
+    margin-left: 250px;
+    margin-top: 50px;
+  }
+  .img-body img{
+    width: 75%;
+  }
+
+  .quote1{
+    margin: 100px 0;
+    padding: 100px;
+    background-image: linear-gradient(to right,#fcffea, #4f4c456e);
+  }
+  .quote2{
+    background-image: linear-gradient(to left,#fcffea, #4f4c456e);
+  }
+  .quote1 p{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Frnklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 200;
+    color: #4f4c45;
+  }
+  .quote1-p{
+    padding-left: 20px;
+    font-weight: 500;
+  }
+#about-container{
+  margin-bottom: 30px;
+}
+   .heading{
+    text-align: center;
+    margin: 30px 0;
+    font-size: 35px;
+    color: #4f4c45;
+    font-weight: 900;
+    position: relative;
+  }
+
+  .heading::after{
+    content:'';
+    height:4px;
+    width:4%;
+    background:#4f4c45;
+    position:absolute;
+    top: 36px;
+    left: 630px;
+  }
+  .ed-head::after{
+    left: 600px;
+  }
+  /* .para-abt{
+    
+    border: 1px solid #4f4c45;
+  } */
+  .para-1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .para-1 p{
+    /* display: flex;
+    align-items: start; */
+    font-family: Arial, sans-serif;
+    padding: 5px 40px 0 0px;
+    width: 40%;
+    text-align: justify;
+    color: #2c2b28;
+    font-size: 18px;
+    font-weight: 200;
+    
+  }
+  .para-2 p{
+    padding: 50px 0px 0 40px;
+    width: 40%;
+    font-family: Arial, sans-serif;
+    text-align: justify;
+    color: #2c2b28;
+    font-size: 18px;
+    font-weight: 200;
+  }
+
+  .para-2{
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+  }
+  .ed-conatiner-tx{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 90px;
+    border: 1px solid #4f4c45;
+    padding: 20px;
+  }
+  .ed-text{
+    width: 55%;
+    margin-left: 40px;
+    text-align: justify;
+    font-family: Arial, sans-serif;
+    color: #2c2b28;
+  }
+.image-frame{
+  display: flex;
+  flex-direction: column;
+  float: right;
+  align-items: center;
+  position: relative;
+  
+  /* left: 20pc; */
+}
+  .image-frame img{
+    width: 50%;
+    height: 340px;
+    border: 10px solid #4f4c45;
+    margin: 0 0 10px 0;
+    }
+  .outer-b{
+    /* margin: 40px 400px; */
+    border: 10px solid #4f4c45;
+  }
+  .inner-b{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border: 2px solid #4f4c45;
+    margin: 2px;
+  }
+
+  .inner-b span{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+  }
+
+
+  #gallery-container h1::after{
+    left: 522px;
+    width: 10%;
+  }
+
+.g-container {
+  columns: 5 200px;
+  column-gap: 1.5rem;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.g-container .img-c {
+  width: 150px;
+  margin: 0 1.5rem 1.5rem 0;
+  display: inline-block;
+  width: 100%;
+  border: solid 2px black;
+  padding: 5px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  transition: all 0.25s ease-in-out;
+}
+
+.g-container .img-c:hover img {
+  filter: grayscale(0);
+}
+
+.g-container .img-c:hover {
+  border-color: coral;
+}
+
+.g-container .img-c img {
+  width: 100%;
+  filter: grayscale(100%);
+  border-radius: 5px;
+  transition: all 0.25s ease-in-out;
+}
+
+.g-container .img-c p {
+  margin: 5px 0;
+  padding: 0;
+  text-align: center;
+  font-style: italic;
+}
