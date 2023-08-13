@@ -200,8 +200,8 @@ body {
 
 
   #gallery-container h1::after{
-    left: 522px;
-    width: 10%;
+    left: 600px;
+    width: 7%;
   }
 
 .g-container {
@@ -243,4 +243,10 @@ body {
   padding: 0;
   text-align: center;
   font-style: italic;
+}
+
+.copyright{
+  color: #4f4c45;
+  text-align: center;
+  border-top: 1px solid #4f4c45;
 }
