@@ -1,0 +1,105 @@
+
+/* inner container which containe text and forms */
+.inner-log-reg-con{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(0, 0, 0, 0.438);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.534);
+    border-radius: 15px;
+    position: relative;
+    top: 5pc;
+    left: 43%;
+}
+/* login and register container */
+.login-regi-tex-con{
+    display: flex;
+    justify-content: space-between;
+}
+.login-regi-tex-con span{
+    padding: 0 60px;
+}
+.login-regi-tex-con .span-2{
+border-radius: 120px 0px 0px 0px;
+}
+.login-regi-tex-con .span-1{
+    border-radius: 0px 120px 0px 0px;
+}
+
+.login-con{
+    min-width: 300px;
+    margin: 0 auto;
+    padding: 10px 40px 20px 20px;
+    transition: 1s;
+}
+
+.login-con input {
+    display: block;
+    width: 100%;
+    margin: 10px 0 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.login-con button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 11px;
+    background-color: black;
+    box-shadow: 0 2px 8px rgb(0, 0, 0);
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.login-con button:hover {
+    background-color: #0056b3;
+}
+.active-login {
+    background-color: #0f4c81;
+    color: white;
+    transition: 1s;
+}
+.active-register {
+    background-color: #0f4c81;
+    color: white;
+    transition: 1s;
+}
+.registration-con {
+    transition: 1s;
+  min-width:300px;
+  margin: 0 auto;
+  padding: 10px 40px 20px 20px;
+}
+
+.registration-con input {
+    display: block;
+    width: 100%;
+    margin: 10px 0 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.registration-con button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 11px;
+    background-color: black;
+    box-shadow: 0 2px 8px rgb(0, 0, 0);
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.registration-con button:hover {
+    background-color: #0056b3;
+}
+
+/* .click-here{
+    cursor: pointer;
+    color: blues;
+} */

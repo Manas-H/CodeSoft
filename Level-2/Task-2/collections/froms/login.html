@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="../css/login.css" />
+  </head>
+  <body>
+    <div class="login-register-con">
+      <div class="inner-log-reg-con">
+        <div class="login-regi-tex-con">
+          <span class="span-1 active-login" id="login">
+            <p>Login</p>
+          </span>
+          <span class="span-2" id="register">
+            <p>Register</p>
+          </span>
+        </div>
+        <div class="login-con active-login">
+          <!-- Login Form -->
+          <form action="your_login_endpoint" method="post">
+            <label>Email :</label>
+            <input type="email" name="email" placeholder="Email" required />
+            <label>Password :</label>
+            <input
+              type="password"
+              name="password"
+              placeholder="Password"
+              required
+            />
+            <button type="submit">Login</button>
+          </form>
+        </div>
+
+        <div class="registration-con active-login" style="display: none">
+          <!-- Registration Form -->
+          <form action="your_registration_endpoint" method="post">
+            <label>Full Name :</label>
+            <input
+              type="text"
+              name="full_name"
+              placeholder="Full Name"
+              required
+            />
+            <label>Email :</label>
+            <input type="email" name="email" placeholder="Email" required />
+            <label>Mobile No :</label>
+            <input
+              type="tel"
+              name="mobile_number"
+              placeholder="Mobile Number"
+              required
+            />
+            <label>Password :</label>
+            <input
+              type="password"
+              name="password"
+              placeholder="Password"
+              required
+            />
+            <label>Confirm Password :</label>
+            <input
+              type="password"
+              name="confirm_password"
+              placeholder="Confirm Password"
+              required
+            />
+            <button type="submit">Register</button>
+          </form>
+          <!-- <span>Already have a account?<span class="click-here active-login" id="login">Click here</span></span> -->
+        </div>
+      </div>
+    </div>
+
+  <script>
+        const loginSpan = document.getElementById("login");
+        const registerSpan = document.getElementById("register");
+        const loginDiv = document.querySelector(".login-con");
+        const registerDiv = document.querySelector(".registration-con");
+
+        loginSpan.addEventListener("click", function () {
+            loginDiv.style.display = "block";
+            registerDiv.style.display = "none";
+            loginSpan.classList.add("active-login");
+            registerSpan.classList.remove("active-register");
+        });
+
+        registerSpan.addEventListener("click", function () {
+            loginDiv.style.display = "none";
+            registerDiv.style.display = "block";
+            registerSpan.classList.add("active-register");
+            loginSpan.classList.remove("active-login");
+        });
+    </script>
+  </body>
+</html>

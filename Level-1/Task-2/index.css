@@ -222,11 +222,14 @@ body::before {
   font-family: "terminal";
   color: black;
   font-size: 20px;
+  text-align: justify;
+  padding: 20px;
 }
 
 .img-about img{
-  width: 48vh;
+  width: 32vh;
   height: 40vh;
+  padding: 10px 0 0 15px;
   
 }
 .dialog-footer {
@@ -446,6 +449,7 @@ text-align: center;
   width: 30px;
   height: 30px;
   display: flex;
+  text-decoration: none;
   align-items: center;
   justify-content: center;
   border: 1px solid #ccc;
@@ -453,6 +457,9 @@ text-align: center;
   transition: background-color 0.3s;
 }
 
+.media-icon i{
+  color: white;
+}
 .media-icon:hover {
-  background-color: #f0f0f0;
+  background-color: red;
 }

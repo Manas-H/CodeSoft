@@ -193,12 +193,7 @@ nav::after {
        font-family: "Segoe Script", cursive;
        padding: 3px;
    }
-   /* .image img{
-       width: 100px;
-       height: 150px;
-       z-index: 1;
-       background: transparent;
-   } */
+
    .board-0{
     margin: 80px 0 0 0;
     transform: rotate(10deg);
@@ -215,10 +210,6 @@ nav::after {
        margin: 6px 8px -2px 7px;
    }
    
-   .board-1 .train{
-       /* padding: 0;
-       margin-bottom: 100px; */
-   }
    .board-2{
        width: 264px;
        height: 394px;
@@ -228,10 +219,6 @@ nav::after {
    .board-3{
        width: 288px;
        height: 237px;
-       /* position: relative;
-       left: 8%;
-       bottom: 122%; */
-       /* transform: rotate(10deg); */
        transform: rotate(-10deg);
        text-align: center;
        
@@ -240,11 +227,6 @@ nav::after {
        width: 274px;
    }
    .board-4{
-       /* width: 288p;
-       height: 237px;x */
-       /* position: relative;
-       left: 65%;
-       bottom: 169.5%; */
        transform: rotate(10deg);
    }
    
@@ -304,11 +286,6 @@ nav::after {
   color: white;
 }
 
-
-.plans-container{
-    
-}
-
 .plans-in-con{
     margin:  0 80px;
     border: 1px solid rgb(241, 226, 226);
@@ -323,11 +300,6 @@ nav::after {
     align-items: center;
 }
 
-/* .plan-row-2 {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-} */
 
 .icon a, a.icon a:visited{
     display: flex;
@@ -376,7 +348,9 @@ nav::after {
   
 }
 
-.card-main-con .more:hover{
+.card-main-con .more:hover,
+   .card-main-con .more a:hover
+  {
     background-color: rgb(12, 132, 187);
     color: white;
 }
@@ -481,18 +455,13 @@ nav::after {
 }
 .f-in-c{
 display: flex;
-justify-content:space-around ;
+justify-content:space-around;
+margin-bottom: 10px;
 }
 .main-f-con{
-    /* display: flex;
-    flex-direction: column;
-    flex-shrink: 1; */
     padding: 1px 0 0 45px;
 }
 .main-f-con p{
-    /* font-size: 0.875rem;
-    line-height: 1;
-    margin-top: 1rem; */
     color: #1f2937;
 }
 .f-icons{

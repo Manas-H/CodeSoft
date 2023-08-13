@@ -156,39 +156,50 @@ body {
         background-color: #0f4c81;
         margin-top: 3rem;
         width: 100%;
-        height: 60vh;
+        height: 70vh;
+        /* background-image: url(../../Assets/Mediamodifier-Design\ \(1\).svg); */
+        background-image: url(../../Assets/reverse-bg.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
       }
 
       .headin-bus-b-con{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 13px 20px 0 20px;
-        color: white;
+        padding: 6px 20px 10px 20px;
+        /* color: white; */
+        color: #0f4c81;
       }
  /* inner box train search and book */
   .inner-search-tr{
     position: relative;
-    top: 0%;
+    top: -5%;
     left: 10%;
-    background-color: #E8FFCE;
+    /* background-color: #E8FFCE; */
+    background-color: white;
     width: 80%;
-    height: 14rem;
+    height: 12rem;
     border-radius: 15px;
+    border: 1px solid #0f4c8159;
+    box-shadow: 0 0 10px rgba(19, 32, 68, 0.253);
   }
   
   /* train booking container */
-  .book-train{
+  .book-bus{
     /* display:flex; */
     /* justify-content: space-around; */
     background-color: white;
     border: 1px solid rgba(0, 0, 0, 0.267);
     border-radius: 20px;
     padding: 10px;
-    margin: 10px 80px;
+    margin: 0px 30px;
+    position: relative;
+    top: 20px;
   }
-  .book-train .book-t-in-f-t{
+  .book-bus .book-t-in-f-t{
     display: flex;
+    justify-content: center;
     align-items: center;
   }
 
@@ -225,7 +236,7 @@ body {
     font-weight: 700;
     /* color: #c2c2c2; */
     color: black;
-    padding:15px 40px;
+    padding:15px 20px;
 }
 /* symbol or icon in the middle of fromand to */
 .double-sym{
@@ -239,8 +250,9 @@ body {
     justify-content: center;
     cursor: pointer;
     position: relative;
-    bottom: 5px;
+    bottom: 9px;
     padding: 8px;
+    margin: 0 4px;
 }
 /* search button  */
 .search-train p{
@@ -251,7 +263,7 @@ body {
   color: white;
   box-shadow: 0 0 10px rgb(0 0 0 / 63%);
   position: absolute;
-  bottom: -10px;
+  top: 65%;
   left: 44%;
   padding: 10px 40px;
   border-radius: 20px;
@@ -266,14 +278,242 @@ body {
 }
 
 .bus-dates{
-    border-radius: 0;
-    margin-right: 0;
-    transition: all 0.2s linear;
+   margin-bottom: 15px;
+   position: relative;
+   top: 7px;
 }
 
-.bus-dates label{
+
+.bus-dates p{
+  font-family: Quicksand;
+  font-size: 14px;
+  display: inline-flex;
+  font-weight: 700;
+  color: #777;
+  position: absolute;
+  /* padding: 0 4px;
+  left: 51pc;
+  top: 43px; */
+  background-color: #fff;
+}
+.bus-dates input{
+  /* display: flex;
+  align-items: center; */
+  font-family: Quicksand;
+  /* font-size: 18px; */
+  font-weight: 700;
+  color: #c2c2c2;
+  padding:13px 1px;
+}
+
+/* main rtc con */
+.rtc-t-con{
+  position: relative;
+  bottom: 40px;
+  background-color: white;
+  margin: 10px 50px;
+  border: 1px solid rgba(0, 0, 0, 0.37);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.253);
+  border-radius: 15px;
+}
+/* all logo conti */
+.num-rtc {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+/* link clickable img and text */
+.num-rtc a{
+  text-decoration: none;
+  align-items: center;
+  display: flex;
+  justify-content: end;
+  flex-direction: column;
+}
+
+/* logo of the rtc */
+.num-rtc a img{
+  width: 90px;
+}
+/* text under the logo of rtc */
+.num-rtc a text{
+  padding: 3px 0;
+  color: black;
+}
+
+
+/* offer container css */
+.offers-container{
+  border: 1px solid rgba(0, 0, 0, 0.384);
+  box-shadow: 0 0 0px rgba(0, 0, 0, 0.253);
+  border-radius: 20px;
+  background-color: white;
+  width: 90%;
+  height: auto;
+  margin: 30px 60px;
+  }
+  /* heading of the offer container */
+  .offers-container h1{
+    text-align: center;
+    font-weight: 400;
+  }
+  .offers-inner-container{
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: calc(33.33% - 10px);
+  }
+  /* offer container single  */
+  .offer-div-c{
+    border: 1px solid rgba(0, 0, 0, 0.384);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.253);
+    border-radius: 20px;
+    width: 29.8%;
+    height: auto;
+    margin: 20px;
+  }
+  /* image inside the single container */
+  .image-text-offer {
+   display: flex;
+   padding: 5px 10px;
+  }
+  
+  .image-text-offer img{
+  width: 120px;  
+   }
+  .image-text-offer .text-offer{
+    padding-left: 15px;
+  }
+  .text-link-offer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    }
+    /* .offer-4-con{
+      margin-left: 210px;
+    } */
+  
+    .text-off-heading{
+      font-size: 17px;
+      font-weight: 800;
+    }
+  
+    .text-off-txt{
+      font-size: 13px;
+    }
+  
+    /* Common styles for the "Why Choose Us" div */
+  
+  .chooseus-container{
+    border: 1px solid rgba(0, 0, 0, 0.384);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.253);
+    border-radius: 20px;
+    background-color: white;
+    width: 90%;
+    margin: 30px 65px;
+  }
+  .chooseus-container h1{
+    text-align: center;
+    font-weight: 400;
+  }
+  .why-choose-us-container{
+    display: flex;
+    align-items: center;
+  }
+  .why-choose-us {
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    margin: 2px 20px 20px 20px;
+    width: 25%;
+    height: 130px;
+  }
+  
+  .icon-container {
+    flex: 0 0 80px;
+    margin-right: 20px;
+  }
+  
+  .icon-container img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .content h2{
+    font-size: 21px;
+    /* flex: 1; */
+  }
+  
+  
+  .footer-con{
+    width: 100%;
+    background-color: #fff;
+    margin: 20px 0 0 0 ;
+  }
+  .f-in-c{
+  display: flex;
+  justify-content:space-around ;
+  }
+  .main-f-con{
+    /* display: flex;
+    flex-direction: column;
+    flex-shrink: 1; */
+    padding: 1px 0 0 45px;
+  }
+  .main-f-con p{
+    /* font-size: 0.875rem;
+    line-height: 1;
+    margin-top: 1rem; */
+    color: #1f2937;
+  }
+  .dark h1 a{
+    text-decoration: none;
+    color: black;
+  }
+  .f-icons{
+    display: flex;
+    align-items: center;
+  }
+  .btn{
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.5);
+    outline-offset: 2px;
+    opacity: 0.5;
+    width: 2rem;
+    height: 2rem;
+    flex-shrink: 0;
+    background-color: #1f2937;
+    cursor: pointer;
+    background-color: #374151;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .btn-p{
+    margin-left: 17px;
+  }
+  
+  
+  .company-con{
     display: flex;
     flex-direction: column;
-    padding: 10px 20px;
+    text-align: left;
+    margin: 10px 80px;
+  }
+  
+  .c-link {
+    outline: none;
+    text-decoration: none;
     cursor: pointer;
-}
+    font-size: 1rem;
+    line-height: 1.25rem;
+    margin-top: 1.5rem;
+    color: #1f2937;
+  }
+  
+  .c-link:hover {
+    color: #6b7280;
+  }

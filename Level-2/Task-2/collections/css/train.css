@@ -171,10 +171,13 @@ nav::after {
     position: relative;
     top: 0%;
     left: 10%;
-    background-color: #E8FFCE;
+    /* background-color: #E8FFCE; */
+    background-color: white;
     width: 80%;
     height: 14rem;
     border-radius: 15px;
+    border: 1px solid #0f4c8159;
+    box-shadow: 0 0 10px rgba(19, 32, 68, 0.253);
   }
   /* train status div  */
   .train-statuses{
@@ -297,6 +300,15 @@ nav::after {
  background-color: #fff;
  color: #0f4c81;
 
+}
+#from-suggestions{
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.342);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.644);
+  padding-top: 13px;
+  text-align: center;
+  overflow-x: scroll;
+  height: 300px;
 }
 
 /* pnr container */

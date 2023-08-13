@@ -1,0 +1,150 @@
+<?php
+session_start();
+
+// Check if the user is logged in
+$is_logged_in = false;
+if (isset($_SESSION["user_email"])) {
+    $is_logged_in = true;
+    $user_email = $_SESSION["user_email"];
+}
+?>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Search Result</title>
+        <link rel="stylesheet" href="../css/train.css" />
+        <link rel="stylesheet" href="../css/results.css" />
+        <!-- Include any necessary CSS or JavaScript files here -->
+</head>
+<body>
+    <?php include 'header.php' ?>
+   <div class="b-k-t-outer">
+    <div class="book-train">
+        <div class="book-t-in-f-t">
+            <div class="station-search">
+                <p for="from-search">From:</p>
+                <input
+                    type="text"
+                    id="from-search"
+                    placeholder="Enter station name"
+                    autocomplete="off"
+                    value="<?php echo isset($_GET['from']) ? htmlspecialchars($_GET['from']) : ''; ?>"
+                />
+                <div id="from-suggestions"></div>
+            </div>
+            <div class="double-sym">
+                <img
+                    src="https://gos3.ibcdn.com/reverse-arrow-1668596930.png"
+                    alt="arrow icon"
+                    width="20"
+                    height="20"
+                />
+            </div>
+            <div class="station-search">
+                <p for="to-search">To:</p>
+                <input
+                    type="text"
+                    id="to-search"
+                    placeholder="Enter station name"
+                    autocomplete="off"
+                    value="<?php echo isset($_GET['to']) ? htmlspecialchars($_GET['to']) : ''; ?>"
+                />
+                <div id="to-suggestions"></div>
+            </div>
+        </div>
+        <div class="search-train" id="search-btn">
+            <p>Update Search</p>
+        </div>
+    </div>
+    </div> 
+    
+    <div class="results">
+    <?php
+// Retrieve the "from" and "to" station names with codes from the URL parameters
+$fromStationWithCode = isset($_GET['from']) ? $_GET['from'] : '';
+$toStationWithCode = isset($_GET['to']) ? $_GET['to'] : '';
+
+// Separate the station name and code using string manipulation
+$fromStationParts = explode(", ", $fromStationWithCode);
+$toStationParts = explode(", ", $toStationWithCode);
+
+$fromStationCode = isset($fromStationParts[1]) ? $fromStationParts[1] : '';
+$toStationCode = isset($toStationParts[1]) ? $toStationParts[1] : '';
+
+// Now you have $fromStationName and $toStationName containing the station names
+// And $fromStationCode and $toStationCode containing the station codes
+
+// For example, to display the selected stations and their codes:
+// echo "Selected From Station: " . $fromStationName . "<br>";
+// echo "Selected From Code: " . $fromStationCode . "<br>";
+// echo "Selected To Station: " . $toStationName . "<br>";
+// echo "Selected To Code: " . $toStationCode . "<br>";
+?>
+<?php
+
+$curl = curl_init();
+
+curl_setopt_array($curl, [
+    CURLOPT_URL => "https://irctc1.p.rapidapi.com/api/v3/trainBetweenStations?fromStationCode=$fromStationCode&toStationCode=$toStationCode&dateOfJourney=2023-08-23",
+    CURLOPT_RETURNTRANSFER => true,
+	CURLOPT_ENCODING => "",
+	CURLOPT_MAXREDIRS => 10,
+	CURLOPT_TIMEOUT => 30,
+	CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+	CURLOPT_CUSTOMREQUEST => "GET",
+	CURLOPT_HTTPHEADER => [
+		"X-RapidAPI-Host: irctc1.p.rapidapi.com",
+		"X-RapidAPI-Key: 2c1d93c14dmshcabf7c3bc305e7fp1ba0b4jsn3b1d3df0e4ed"
+	],
+]);
+
+
+$response = curl_exec($curl);
+$err = curl_error($curl);
+
+curl_close($curl);
+
+if ($err) {
+	echo "cURL Error #:" . $err;
+} else {
+    $responseData = json_decode($response, true);
+
+    if (isset($responseData['data']) && is_array($responseData['data'])) {
+
+    echo '<div class="train-card-con">';
+    foreach($trainData as $train) {
+        echo '<a href="booktrain.php">';
+        echo '<div class="train-card">';
+        echo '<div class="train-top-up">';
+        echo '<div class="train-number">' . $train['train_number'] . '</div>';
+        echo '<div class="train-name">' . $train->train_name . '</div>';
+        echo '</div>';
+        echo '<div class="stations">';
+        echo '<div class="st-from">From: ' . $train->from_station_name . ' (' . $train->from . ')</div>';
+        echo '<div class="double-sym">';
+        echo '<img src="https://gos3.ibcdn.com/reverse-arrow-1668596930.png" alt="arrow icon" width="20" height="20" />';
+        echo '</div>';
+        echo '<div class="st-to">To: ' . $train->to_station_name . ' (' . $train->to . ')</div>';
+        echo '</div>';
+        echo '<div class="train-mid">';
+        echo '<div class="days">Runs on: ' . implode(', ', $train->run_days) . '</div>';
+        echo '<div class="class-types">Class Types: ' . implode(', ', $train->class_type) . '</div>';
+        echo '</div>';
+        echo '<div class="duration">Duration: ' . $train->duration . '</div>';
+        echo '</div>';
+        echo '</a>';
+    }
+    echo '</div>';
+}else {
+    echo "No train data available.";
+}
+}
+
+?>
+</div>
+
+    <script src="stations.js"></script>
+    <!-- Include any additional content or scripts here -->
+</body>
+</html>

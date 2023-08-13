@@ -233,3 +233,7 @@ border-left: 1px solid black;
   .buttons-1 #on-btn i{
     font-family: 12px;
   }
+
+  .disabled:hover,  .buttons-1 .disabled:hover{
+    background-color: red;
+  }
